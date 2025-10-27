@@ -15,3 +15,11 @@ export function convertTemperatureTo(value, unit) {
     return value * 1.8 + 32;
   }
 }
+
+export function isIceTemperature(value, unit) {
+  if (unit === UNITS.CELSIUS) {
+    return value <= 0;
+  } else {
+    return value <= 32;
+  }
+}
